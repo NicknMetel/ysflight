@@ -7,7 +7,7 @@
 |**Generation Platform**<br>Visual Studio Code|
 |**Template Used**<br>Basic V2|
 |**Service Type**<br>SAP System (ABAP On Premise)|
-|**Service URL**<br>http://bxdemo1.bxts.co.kr:8030/sap/opu/odata/sap/YGWSFLIGHT_01_SRV|
+
 |**Module Name**<br>project0|
 |**Application Title**<br>App Title|
 |**Namespace**<br>ysflight|
