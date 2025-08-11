@@ -4,7 +4,7 @@
     "generatorPlatform": "Visual Studio Code",
     "serviceType": "SAP System (ABAP On Premise)",
     "metadataFilename": "",
-    "serviceUrl": "http://bxdemo1.bxts.co.kr:8030/sap/opu/odata/sap/YGWSFLIGHT_01_SRV",
+    "serviceUrl": "*/sap/opu/odata/sap/YGWSFLIGHT_01_SRV",
     "appName": "project0",
     "appTitle": "App Title",
     "appDescription": "An SAP Fiori application.",
