@@ -1,0 +1,47 @@
+<core:FragmentDefinition 
+    xmlns:core="sap.ui.core" 
+    xmlns="sap.m" 
+    xmlns:smartform="sap.ui.comp.smartform"
+    xmlns:smartfield="sap.ui.comp.smartfield"
+    xmlns:ui="sap.ui.table"
+>
+    <smartform:SmartForm id="idForm" editable="{flagSet>/isEdit}">
+         <smartform:Group id="idGroup">
+             <smartform:GroupElement id="idGroupElement1" label="{i18n>lbCarrid}">
+                 <smartfield:SmartField id="Carrid" value="{Carrid}"/>
+             </smartform:GroupElement>
+             <smartform:GroupElement id="idGroupElement2" label="{i18n>lbConnid}">
+                 <smartfield:SmartField id="Connid" value="{Connid}"/>
+             </smartform:GroupElement>
+             <smartform:GroupElement id="idGroupElement3" label="{i18n>lbFldate}">
+                 <smartfield:SmartField id="Fldate" value="{Fldate}"/>
+             </smartform:GroupElement>
+             <smartform:GroupElement id="idGroupElement4" label="{i18n>lbPrice}">
+                 <smartfield:SmartField id="Price" value="{Price}"/>
+             </smartform:GroupElement>
+             <smartform:GroupElement id="idGroupElement5" label="{i18n>lbPlanetype}">
+                 <smartfield:SmartField id="Planetype" value="{Planetype}"/>
+             </smartform:GroupElement>
+         </smartform:Group>
+         <smartform:Group id="idGroup2">
+             <smartform:GroupElement id="idGroupElement6" label="{i18n>lbSeatsmax}">
+                 <smartfield:SmartField id="idSmartField6" value="{Seatsmax}"/>
+              </smartform:GroupElement>
+             <smartform:GroupElement id="idGroupElement7" label="{i18n>lbSeatsocc}">
+                 <smartfield:SmartField id="idSmartField7" value="{Seatsocc}"/>
+             </smartform:GroupElement>
+             <smartform:GroupElement id="idGroupElement8" label="{i18n>lbSeatsmaxB}">
+                 <smartfield:SmartField id="idSmartField8" value="{SeatsmaxB}"/>
+             </smartform:GroupElement>
+             <smartform:GroupElement id="idGroupElement9" label="{i18n>lbSeatsoccB}">
+                 <smartfield:SmartField id="idSmartField9" value="{SeatsoccB}"/>
+             </smartform:GroupElement>
+             <smartform:GroupElement id="idGroupElement10" label="{i18n>lbSeatsmaxF}">
+                 <smartfield:SmartField id="idSmartField10" value="{SeatsmaxF}"/>
+             </smartform:GroupElement>
+             <smartform:GroupElement id="idGroupElement11" label="{i18n>lbSeatsoccF}">
+                 <smartfield:SmartField id="idSmartField11" value="{SeatsoccF}"/>
+             </smartform:GroupElement>
+         </smartform:Group>                   
+     </smartform:SmartForm>
+</core:FragmentDefinition>

@@ -1,0 +1,61 @@
+<mvc:View
+    controllerName="ysflight.controller.Create"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:uxap="sap.uxap"
+    xmlns:smartform="sap.ui.comp.smartform"
+    xmlns:smartfield="sap.ui.comp.smartfield"
+    xmlns:html="http://www.w3.org/1999/xhtml">
+
+    <uxap:ObjectPageLayout id="idObjectPageLayout"
+        enableLazyLoading="true"
+        showTitleInHeaderContent="true"
+        showFooter="true"
+        >
+        <uxap:headerTitle>
+            <uxap:ObjectPageHeader 
+            id="_IDGenObjectPageHeader" 
+            objectTitle="{i18n>newTitle}"
+            objectSubtitle="{i18n>newSubTitle}"
+            isObjectIconAlwaysVisible="false"
+            isObjectTitleAlwaysVisible="false"
+            isObjectSubtitleAlwaysVisible="false">
+            </uxap:ObjectPageHeader>
+        </uxap:headerTitle>
+        <uxap:sections>
+            <uxap:ObjectPageSection 
+            id="idObjectPageSection" 
+            titleUppercase="false"
+            title="{i18n>flightInfoInputTitle}"
+            >
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection 
+                    id="idObjectPageSubSection"
+                    title="Flight Basic Information"
+                    >
+                        <core:Fragment fragmentName="ysflight.view.fragment.SflightForm" type="XML"/>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+        <uxap:footer>
+            <Bar id="_IDGenBar">
+                <contentLeft>
+                    <Button
+                        id="_IDGenButton0"
+                        type="Emphasized"
+                        icon="sap-icon://message-popup"
+                        text="{= ${message>/}.length }"
+                        visible="{=!!${message>/}.length}"
+                        press="handleMessagePopoverPress"
+                    />                
+                </contentLeft>
+                <contentRight>
+                    <Button id="idBtnSave" text="{i18n>btnSave}" press="handleSave" type="Emphasized"/>
+                    <Button id="idBtnCancel" text="{i18n>btnCancel}" press="handleCancel"/>
+                </contentRight>
+            </Bar>
+        </uxap:footer>
+    </uxap:ObjectPageLayout>
+</mvc:View>

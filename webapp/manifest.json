@@ -1,0 +1,146 @@
+{
+    "_version": "1.65.0",
+    "sap.app": {
+        "id": "ysflight",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.18.1",
+            "toolsId": "d0c47a1a-ab97-4a93-82c2-12afe2bf4b0c"
+        },
+        "dataSources": {
+            "MAIN_SRV": {
+                "uri": "/sap/opu/odata/sap/YGWSFLIGHT_01_SRV/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "annotation"
+                    ],
+                    "localUri": "localService/mainService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "annotation": {
+                "type": "ODataAnnotation",
+                "uri": "model/annotation.xml",
+                "settings": {
+                    "localUri": "model/annotation.xml"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.71.0",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "ysflight.i18n.i18n"
+                }
+            },
+            "": {
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "settings": {
+                    "defaultCountMode": "Request",
+                    "defaultOperationMode": "Server",
+                    "defaultBindingMode": "TwoWay",
+                    "refreshAfterChange": "true"
+                },
+                "dataSource": "MAIN_SRV",
+                "preload": false
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "controlAggregation": "pages",
+                "controlId": "APP_ID",
+                "transition": "slide",
+                "type": "View",
+                "viewType": "XML",
+                "path": "ysflight.view",
+                "async": true,
+                "viewPath": "ysflight.view"
+            },
+            "routes": [
+                {
+                    "name": "List",
+                    "pattern": "",
+                    "target": "List"
+                },
+                {
+                    "name": "Create",
+                    "pattern": "Create",
+                    "target": "Create"
+                },
+                {
+                    "name": "Detail",
+                    "pattern": "Detail/{key}",
+                    "target": "Detail"
+                }
+            ],
+            "targets": {
+                "List": {
+                    "viewId": "List",
+                    "viewName": "List"
+                },
+                "Create": {
+                    "viewId": "Create",
+                    "viewName": "Create"
+                },
+                "Detail": {
+                    "viewType": "XML",
+                    "viewId": "Detail",
+                    "viewName": "Detail"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "ysflight.view.App",
+            "type": "XML",
+            "id": "App",
+            "async": true
+        }
+    }
+}

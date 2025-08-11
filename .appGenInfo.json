@@ -1,0 +1,24 @@
+{
+  "generationParameters": {
+    "generationDate": "Mon Jul 07 2025 11:30:32 GMT+0900 (Korean Standard Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "SAP System (ABAP On Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "http://bxdemo1.bxts.co.kr:8030/sap/opu/odata/sap/YGWSFLIGHT_01_SRV",
+    "appName": "project0",
+    "appTitle": "App Title",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "ysflight",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.136.2",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.18.1",
+    "template": "Basic V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "In order to launch the generated app, simply run the following from the generated app root folder:\n\n```\n    npm start\n```"
+  }
+}
